@@ -3,12 +3,9 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Creando nuevo proyecto
+Inyección de dependencias (LOC): Creando la clase Model y la clase Repository
 
 
-06:12
-Creando la clase Model y la clase Repository
-07:41
 Implementando método findById en la clase Repository
 04:17
 Escribiendo la clase Service
