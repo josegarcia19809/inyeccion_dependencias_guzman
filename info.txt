@@ -1,0 +1,49 @@
+Spring Framework 6 & Spring Boot 3 desde cero a experto
+Andrés Guzman
+
+Fecha de inicio: lunes 9 de diciembre 2024
+
+Inyección de dependencias (LOC): Creando nuevo proyecto
+
+
+06:12
+Creando la clase Model y la clase Repository
+07:41
+Implementando método findById en la clase Repository
+04:17
+Escribiendo la clase Service
+08:03
+Creando la clase Controller
+04:36
+Principio de Inmutabilidad
+09:08
+Inmutabilidad usando la interface Cloneable
+07:30
+Escribiendo las interfaces Repository y Service
+10:13
+Introducción al contenedor y la inyección de dependencias
+10:09
+Implementando inyección de dependencia con anotaciones @Autowired y @Component
+09:25
+Inyectando mediante la interface
+03:24
+Las anotaciones @Repository y @Service
+06:03
+Inyección de dependencias vía métodos setters y constructor
+05:08
+Anotación @Primary
+08:33
+Anotación @Qualifier
+09:37
+El contexto RequestScope
+07:33
+El contexto SessionScope
+06:59
+Revisión tarea: leer desde un archivo de configuración properties el valor tax
+07:09
+Creando clase que lee los datos de un archivo json
+12:16
+Registrando componente en clase anotada con @Configuration y la anotación @Bean
+09:42
+Algunas variantes en el componente registrado con @Configuration y @Bean
+08:03

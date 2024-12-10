@@ -8,6 +8,7 @@ public class DiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DiApplication.class, args);
+		System.out.println("Servidor corriendo...");
 	}
 
 }
