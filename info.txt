@@ -3,9 +3,9 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Escribiendo la clase Service
+Inyección de dependencias (LOC): Creando la clase Controller
 
-Creando la clase Controller
+
 04:36
 Principio de Inmutabilidad
 09:08
