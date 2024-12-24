@@ -11,7 +11,7 @@ public class ProductRepository {
 
     public ProductRepository() {
         data = Arrays.asList(
-                new Product(1L, "Memoria Crsair 32", 100L),
+                new Product(1L, "Memoria Corsair 32", 100L),
                 new Product(2L, "CPU Intel Core i9", 200L),
                 new Product(3L, "Teclado Razer Mini 60", 180L),
                 new Product(4L, "Motherboard Gigabyte", 500L)
@@ -20,5 +20,10 @@ public class ProductRepository {
 
     public List<Product> findAll() {
         return data;
+    }
+
+    public Product findById(Long id) {
+        return data.stream().filter(p -> p.getId().equals(id))
+                .findFirst().orElse(null);
     }
 }
