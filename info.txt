@@ -3,13 +3,8 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Implementando método findById en la clase Repository
+Inyección de dependencias (LOC): Escribiendo la clase Service
 
-
-
-04:17
-Escribiendo la clase Service
-08:03
 Creando la clase Controller
 04:36
 Principio de Inmutabilidad
