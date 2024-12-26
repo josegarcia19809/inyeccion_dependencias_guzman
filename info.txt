@@ -3,12 +3,12 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Escribiendo las interfaces Repository y Service
+Inyección de dependencias (LOC): Implementando inyección de dependencia con anotaciones @Autowired y @Component
 
 
 Introducción al contenedor y la inyección de dependencias
 10:09
-Implementando inyección de dependencia con anotaciones @Autowired y @Component
+
 09:25
 Inyectando mediante la interface
 03:24
