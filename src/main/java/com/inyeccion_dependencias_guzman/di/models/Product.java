@@ -1,6 +1,6 @@
 package com.inyeccion_dependencias_guzman.di.models;
 
-public class Product {
+public class Product implements Cloneable{
     private Long id;
     private String name;
     private Long price;
@@ -36,5 +36,16 @@ public class Product {
 
     public void setPrice(Long price) {
         this.price = price;
+    }
+
+    @Override
+    public Product clone() {
+        try {
+            Product clone = (Product) super.clone();
+            // TODO: copy mutable state here, so the clone can't change the internals of the original
+            return clone;
+        } catch (CloneNotSupportedException e) {
+            return new Product(id, name, price);
+        }
     }
 }

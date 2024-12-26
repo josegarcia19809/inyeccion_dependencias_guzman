@@ -3,12 +3,8 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Creando la clase Controller
+Inyección de dependencias (LOC): Inmutabilidad usando la interface Cloneable
 
-
-04:36
-Principio de Inmutabilidad
-09:08
 Inmutabilidad usando la interface Cloneable
 07:30
 Escribiendo las interfaces Repository y Service
