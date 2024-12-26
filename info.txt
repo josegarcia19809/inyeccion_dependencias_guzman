@@ -3,12 +3,9 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Inmutabilidad usando la interface Cloneable
+Inyección de dependencias (LOC): Escribiendo las interfaces Repository y Service
 
-Inmutabilidad usando la interface Cloneable
-07:30
-Escribiendo las interfaces Repository y Service
-10:13
+
 Introducción al contenedor y la inyección de dependencias
 10:09
 Implementando inyección de dependencia con anotaciones @Autowired y @Component
