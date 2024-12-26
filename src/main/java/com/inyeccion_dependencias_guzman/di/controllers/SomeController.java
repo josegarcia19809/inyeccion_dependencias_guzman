@@ -2,7 +2,7 @@ package com.inyeccion_dependencias_guzman.di.controllers;
 
 
 import com.inyeccion_dependencias_guzman.di.models.Product;
-import com.inyeccion_dependencias_guzman.di.services.ProductServiceImpl;
+import com.inyeccion_dependencias_guzman.di.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +15,7 @@ import java.util.List;
 @RequestMapping("/api")
 public class SomeController {
     @Autowired
-    private ProductServiceImpl service;
+    private ProductService service;
 
     @GetMapping
     public List<Product> list() {

@@ -1,7 +1,7 @@
 package com.inyeccion_dependencias_guzman.di.services;
 
 import com.inyeccion_dependencias_guzman.di.models.Product;
-import com.inyeccion_dependencias_guzman.di.repositories.ProductRepositoryImpl;
+import com.inyeccion_dependencias_guzman.di.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 @Component
 public class ProductServiceImpl implements ProductService {
     @Autowired
-    private ProductRepositoryImpl repository;
+    private ProductRepository repository;
 
     @Override
     public List<Product> findAll() {
