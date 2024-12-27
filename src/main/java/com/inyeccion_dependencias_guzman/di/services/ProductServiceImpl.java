@@ -14,19 +14,12 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository repository;
 
 
-    @Autowired
-    public void setRepository(ProductRepository repository) {
+    public ProductServiceImpl(ProductRepository repository) {
         /*
-        Cuando Spring escanea la aplicación (por ejemplo, durante el arranque), busca las
-        clases con dependencias anotadas con @Autowired. Si encuentra una dependencia compatible con
-        el tipo (en este caso, un bean que implemente o sea ProductRepository),
-        Spring llama automáticamente al métod0 setRepository para inyectarla.
+        Cuando se pone en el contructor ya no es necesario poner @Autowired
          */
         this.repository = repository;
     }
-
-
-
 
     @Override
     public List<Product> findAll() {
