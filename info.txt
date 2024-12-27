@@ -3,7 +3,7 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Las anotaciones @Repository y @Service
+Inyección de dependencias (LOC): Inyección de dependencias vía métodos setters
 
 
 
