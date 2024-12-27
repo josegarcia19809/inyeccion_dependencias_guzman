@@ -1,0 +1,79 @@
+La anotación @Primary en Spring Framework se utiliza para indicar cuál bean debe ser seleccionado de manera predeterminada cuando hay múltiples implementaciones de una misma interfaz o tipo.
+
+En el ejemplo que compartiste, la anotación @Primary en ProductRepositoryFoo significa que Spring utilizará esta implementación de ProductRepository a menos que se especifique explícitamente otra implementación en el código.
+
+Por qué usar @Primary:
+Resolver conflictos entre múltiples implementaciones:
+
+Si tienes más de una clase que implementa la interfaz ProductRepository, Spring no sabrá cuál usar por defecto y generará una excepción. @Primary resuelve esto especificando cuál implementación es la principal.
+Facilitar la configuración predeterminada:
+
+Permite establecer un bean "predeterminado" que será utilizado en la mayoría de los casos, mientras que las otras implementaciones pueden ser usadas en contextos específicos mediante el uso de la anotación @Qualifier.
+Cómo funciona:
+Supongamos que tienes dos implementaciones de ProductRepository:
+
+Implementación 1:
+java
+Copiar código
+@Primary
+@Repository
+public class ProductRepositoryFoo implements ProductRepository {
+    @Override
+    public List<Product> findAll() {
+        return Collections.singletonList(new Product(1L, "Monitor Asus 27", 600L));
+    }
+
+    @Override
+    public Product findById(Long id) {
+        return new Product(1L, "Monitor Asus 27", 600L);
+    }
+}
+Implementación 2:
+java
+Copiar código
+@Repository
+public class ProductRepositoryBar implements ProductRepository {
+    @Override
+    public List<Product> findAll() {
+        return Collections.singletonList(new Product(2L, "Laptop Dell", 1200L));
+    }
+
+    @Override
+    public Product findById(Long id) {
+        return new Product(2L, "Laptop Dell", 1200L);
+    }
+}
+Si intentas inyectar ProductRepository sin especificar nada adicional:
+
+java
+Copiar código
+@Service
+public class ProductService {
+    private final ProductRepository repository;
+
+    @Autowired
+    public ProductService(ProductRepository repository) {
+        this.repository = repository;
+    }
+}
+Spring elegirá automáticamente ProductRepositoryFoo debido a la anotación @Primary.
+Especificar otra implementación (cuando no quieres usar @Primary):
+Puedes usar la anotación @Qualifier para indicar explícitamente qué implementación quieres:
+
+java
+Copiar código
+@Service
+public class ProductService {
+    private final ProductRepository repository;
+
+    @Autowired
+    public ProductService(@Qualifier("productRepositoryBar") ProductRepository repository) {
+        this.repository = repository;
+    }
+}
+Aquí, Spring seleccionará ProductRepositoryBar en lugar de la implementación predeterminada.
+
+Resumen:
+@Primary se utiliza para evitar ambigüedades cuando hay múltiples beans del mismo tipo.
+Define una implementación predeterminada que se usará cuando no se especifique un @Qualifier.
+Es útil para manejar configuraciones complejas donde existen varias opciones pero una debe ser la principal.

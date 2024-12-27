@@ -3,14 +3,9 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Inyección de dependencias vía constructor
+Inyección de dependencias (LOC): Anotación @Primary
 
 
-
-06:03
-Inyección de dependencias vía métodos setters y
-05:08
-Anotación @Primary
 08:33
 Anotación @Qualifier
 09:37
