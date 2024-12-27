@@ -3,12 +3,12 @@ package com.inyeccion_dependencias_guzman.di.services;
 import com.inyeccion_dependencias_guzman.di.models.Product;
 import com.inyeccion_dependencias_guzman.di.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
+@Service
 public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductRepository repository;
