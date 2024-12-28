@@ -23,28 +23,28 @@ public class ProductServiceImpl implements ProductService {
         this.repository = repository;
     }
 
-//    @Override
-//    public List<Product> findAll() {
-//        return repository.findAll().stream()
-//                .map(p -> {
-//                    Double priceTax = p.getPrice() * 1.25d;
-//                    //Product newProduct = new Product(p.getId(), p.getName(),
-//                    //      priceImp.longValue());
-//                    Product newProduct = p.clone();
-//                    newProduct.setPrice(priceTax.longValue());
-//                    return newProduct;
-//                }).collect(Collectors.toList());
-//    }
-
     @Override
     public List<Product> findAll() {
         return repository.findAll().stream()
                 .map(p -> {
                     Double priceTax = p.getPrice() * 1.25d;
-                    p.setPrice(priceTax.longValue());
-                    return p;
+                    //Product newProduct = new Product(p.getId(), p.getName(),
+                    //      priceImp.longValue());
+                    Product newProduct = p.clone();
+                    newProduct.setPrice(priceTax.longValue());
+                    return newProduct;
                 }).collect(Collectors.toList());
     }
+
+//    @Override
+//    public List<Product> findAll() {
+//        return repository.findAll().stream()
+//                .map(p -> {
+//                    Double priceTax = p.getPrice() * 1.25d;
+//                    p.setPrice(priceTax.longValue());
+//                    return p;
+//                }).collect(Collectors.toList());
+//    }
 
     @Override
     public Product findById(Long id) {

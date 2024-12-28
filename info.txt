@@ -3,9 +3,9 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): El contexto RequestScope
+Inyección de dependencias (LOC): El contexto SessionScope
 
-El contexto SessionScope
+
 06:59
 Revisión tarea: leer desde un archivo de configuración properties el valor tax
 07:09

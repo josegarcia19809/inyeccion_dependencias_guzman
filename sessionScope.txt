@@ -1,0 +1,74 @@
+La anotación @SessionScope en Spring Boot se utiliza para definir el ciclo de vida de un bean
+como Session Scope, lo que significa que el bean estará disponible durante toda la sesión HTTP
+de un usuario. Una sesión se inicia generalmente cuando un cliente interactúa con la aplicación
+por primera vez y finaliza cuando la sesión expira o el usuario la cierra.
+
+¿Cuándo usar @SessionScope?
+@SessionScope es útil cuando necesitas conservar datos específicos del usuario durante múltiples
+solicitudes dentro de la misma sesión, como:
+
+Información del carrito de compras en una aplicación de comercio electrónico.
+Datos de autenticación o autorización.
+Preferencias del usuario mientras navega por la aplicación.
+Ejemplo práctico
+Supongamos que quieres almacenar un contador que registre cuántas veces un usuario ha accedido a
+un recurso durante su sesión.
+
+Definir un bean con @SessionScope:
+java
+Copiar código
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.SessionScope;
+
+@SessionScope
+@Component
+public class UserSession {
+    private int accessCount = 0;
+
+    public int getAccessCount() {
+        return accessCount;
+    }
+
+    public void incrementAccessCount() {
+        accessCount++;
+    }
+}
+Usarlo en un controlador:
+java
+Copiar código
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class SessionController {
+
+    @Autowired
+    private UserSession userSession;
+
+    @GetMapping("/access")
+    public String accessResource() {
+        userSession.incrementAccessCount();
+        return "Access count for this session: " + userSession.getAccessCount();
+    }
+}
+Beneficios
+Persistencia de datos por sesión: Los datos permanecen disponibles mientras dure la sesión del
+usuario.
+Aislamiento entre usuarios: Cada usuario tiene su propia instancia del bean.
+Simplicidad: Facilita el manejo de información relacionada con un usuario durante varias
+interacciones.
+Diferencias con @RequestScope
+Característica	@RequestScope	@SessionScope
+Duración	Vida limitada a una solicitud.	Vida limitada a la sesión HTTP.
+Uso típico	Datos temporales de una solicitud.	Datos persistentes de un usuario durante su sesión.
+Memoria utilizada	Menor (solo durante la solicitud).	Mayor (por la duración de la sesión).
+Ejemplo de uso	Parámetros de una solicitud.	Carrito de compras o estado del usuario.
+Consideraciones importantes
+Manejo de memoria: Si usas @SessionScope para almacenar muchos datos o si las sesiones duran mucho
+tiempo, puedes aumentar el uso de memoria.
+Expiración de la sesión: Los datos del bean se eliminarán cuando la sesión expire.
+Configuración de sesiones: Asegúrate de configurar correctamente los tiempos de vida de las
+sesiones en tu servidor para evitar fugas de memoria.
+Esta anotación es particularmente útil en aplicaciones que mantienen estados en el servidor
+para usuarios durante su interacción continua.
