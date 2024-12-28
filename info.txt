@@ -3,14 +3,8 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Anotación @Qualifier (usando un alias) usar  @Autowired
+Inyección de dependencias (LOC): El contexto RequestScope
 
-
-08:33
-Anotación @Qualifier
-09:37
-El contexto RequestScope
-07:33
 El contexto SessionScope
 06:59
 Revisión tarea: leer desde un archivo de configuración properties el valor tax
@@ -21,5 +15,3 @@ Registrando componente en clase anotada con @Configuration y la anotación @Bean
 09:42
 Algunas variantes en el componente registrado con @Configuration y @Bean
 08:03
-
-@Qualifier("productList")

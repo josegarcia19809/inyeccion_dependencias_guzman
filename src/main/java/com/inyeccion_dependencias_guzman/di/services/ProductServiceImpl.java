@@ -11,17 +11,29 @@ import java.util.stream.Collectors;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-    @Autowired
-    @Qualifier("productFoo")
+
     private ProductRepository repository;
 
 
-//    public ProductServiceImpl(@Qualifier("productList") ProductRepository repository) {
-//        /*
-//        Cuando se pone en el contructor ya no es necesario poner @Autowired
-//        Si se utiliza @Qualifier( se debe escribir la clase en minúscula al inicio
-//         */
-//        this.repository = repository;
+    public ProductServiceImpl(@Qualifier("productList") ProductRepository repository) {
+        /*
+        Cuando se pone en el contructor ya no es necesario poner @Autowired
+        Si se utiliza @Qualifier( se debe escribir la clase en minúscula al inicio
+         */
+        this.repository = repository;
+    }
+
+//    @Override
+//    public List<Product> findAll() {
+//        return repository.findAll().stream()
+//                .map(p -> {
+//                    Double priceTax = p.getPrice() * 1.25d;
+//                    //Product newProduct = new Product(p.getId(), p.getName(),
+//                    //      priceImp.longValue());
+//                    Product newProduct = p.clone();
+//                    newProduct.setPrice(priceTax.longValue());
+//                    return newProduct;
+//                }).collect(Collectors.toList());
 //    }
 
     @Override
@@ -29,11 +41,8 @@ public class ProductServiceImpl implements ProductService {
         return repository.findAll().stream()
                 .map(p -> {
                     Double priceTax = p.getPrice() * 1.25d;
-                    //Product newProduct = new Product(p.getId(), p.getName(),
-                    //      priceImp.longValue());
-                    Product newProduct = p.clone();
-                    newProduct.setPrice(priceTax.longValue());
-                    return newProduct;
+                    p.setPrice(priceTax.longValue());
+                    return p;
                 }).collect(Collectors.toList());
     }
 
