@@ -3,7 +3,7 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Anotación @Qualifier (usando nombre completo)
+Inyección de dependencias (LOC): Anotación @Qualifier (usando un alias)
 
 
 08:33
@@ -22,4 +22,4 @@ Registrando componente en clase anotada con @Configuration y la anotación @Bean
 Algunas variantes en el componente registrado con @Configuration y @Bean
 08:03
 
-@Qualifier("productRepositoryImpl")
+@Qualifier("productList")
