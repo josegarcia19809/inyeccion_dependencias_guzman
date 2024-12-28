@@ -3,6 +3,7 @@ package com.inyeccion_dependencias_guzman.di.services;
 import com.inyeccion_dependencias_guzman.di.models.Product;
 import com.inyeccion_dependencias_guzman.di.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,9 +15,10 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository repository;
 
 
-    public ProductServiceImpl(ProductRepository repository) {
+    public ProductServiceImpl( ProductRepository repository) {
         /*
         Cuando se pone en el contructor ya no es necesario poner @Autowired
+        Si se utiliza @Qualifier( se debe escribir la clase en minúscula al inicio
          */
         this.repository = repository;
     }
