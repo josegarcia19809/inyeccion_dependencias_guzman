@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Primary
-@Repository
+@Repository("productFoo")
 public class ProductRepositoryFoo implements ProductRepository {
     @Override
     public List<Product> findAll() {

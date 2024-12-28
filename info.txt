@@ -3,7 +3,7 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Anotación @Qualifier (usando un alias)
+Inyección de dependencias (LOC): Anotación @Qualifier (usando un alias) usar  @Autowired
 
 
 08:33

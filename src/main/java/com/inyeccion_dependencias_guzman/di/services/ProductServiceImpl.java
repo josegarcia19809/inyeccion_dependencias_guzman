@@ -11,17 +11,18 @@ import java.util.stream.Collectors;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-    //@Autowired
+    @Autowired
+    @Qualifier("productFoo")
     private ProductRepository repository;
 
 
-    public ProductServiceImpl(@Qualifier("productList") ProductRepository repository) {
-        /*
-        Cuando se pone en el contructor ya no es necesario poner @Autowired
-        Si se utiliza @Qualifier( se debe escribir la clase en minúscula al inicio
-         */
-        this.repository = repository;
-    }
+//    public ProductServiceImpl(@Qualifier("productList") ProductRepository repository) {
+//        /*
+//        Cuando se pone en el contructor ya no es necesario poner @Autowired
+//        Si se utiliza @Qualifier( se debe escribir la clase en minúscula al inicio
+//         */
+//        this.repository = repository;
+//    }
 
     @Override
     public List<Product> findAll() {
