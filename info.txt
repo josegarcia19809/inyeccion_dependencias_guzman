@@ -3,12 +3,8 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): Creando clase que lee los datos de un archivo json
+Inyección de dependencias (LOC): Registrando componente en clase anotada con @Configuration y la anotación @Bean
 
 
-Creando clase que lee los datos de un archivo json
-12:16
-Registrando componente en clase anotada con @Configuration y la anotación @Bean
-09:42
 Algunas variantes en el componente registrado con @Configuration y @Bean
 08:03

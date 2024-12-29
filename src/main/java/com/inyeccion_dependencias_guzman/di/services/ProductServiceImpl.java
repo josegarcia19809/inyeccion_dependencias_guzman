@@ -22,10 +22,11 @@ public class ProductServiceImpl implements ProductService {
     private Double tax;
 
 
-    public ProductServiceImpl(@Qualifier("productList") ProductRepository repository) {
+    public ProductServiceImpl( ProductRepository repository) {
         /*
         Cuando se pone en el contructor ya no es necesario poner @Autowired
         Si se utiliza @Qualifier( se debe escribir la clase en minúscula al inicio
+         public ProductServiceImpl(@Qualifier("productList") ProductRepository repository)
          */
         this.repository = repository;
     }
