@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "PlayStation 5",
+    "price": 125
+  },
+  {
+    "id": 2,
+    "name": "CPU Intel Core i9",
+    "price": 250
+  },
+  {
+    "id": 3,
+    "name": "Teclado Razer Mini 60",
+    "price": 225
+  },
+  {
+    "id": 4,
+    "name": "Motherboard Gigabyte",
+    "price": 625
+  }
+]

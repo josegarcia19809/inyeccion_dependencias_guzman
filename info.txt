@@ -3,7 +3,7 @@ Andrés Guzman
 
 Fecha de inicio: lunes 9 de diciembre 2024
 
-Inyección de dependencias (LOC): leer desde un archivo de configuración properties el valor tax (Usar Value)
+Inyección de dependencias (LOC): Creando clase que lee los datos de un archivo json
 
 
 Creando clase que lee los datos de un archivo json
